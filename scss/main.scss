@@ -1,0 +1,660 @@
+$mainColor: lightgreen;
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@mixin checkbox($font-size) {
+  p{
+    color: grey;
+    font-size: $font-size;
+    float: left;
+  }
+  input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-right: 5px;
+    background-color: lightgray;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid black;
+  }
+
+  input[type="checkbox"]:checked {
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/form_ok.jpg");
+    background-size: cover;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+}
+
+header::after, div::after, section::after{
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.container{
+  width: 900px;
+  margin: 0 auto;
+}
+
+img{
+  width: 100%;
+}
+
+header{
+  background-color: black;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  #headerLeft{
+    float: left;
+  }
+  span{
+    color: $mainColor;
+  }
+  h1{
+    text-transform: uppercase;
+    font-size: 16px;
+    span{
+      color: $mainColor;
+    }
+  }
+  #headerRight{
+    float: right;
+    &>ul{
+      list-style: none;
+      &>li{
+        float: left;
+        padding-right: 15px;
+        .menu{
+          position: absolute;
+          padding-top: 15px;
+          z-index: 1;
+          top: 25px;
+          display: none;
+          .content{
+            background-color: black;
+            ul{
+              list-style: none;
+              li{
+                color: white;
+                padding: 5px;
+                &:hover{
+                  color: $mainColor;
+                }
+              }
+            }
+            .arrow-up {
+              width: 0;
+              height: 0;
+              border-left: 12px solid transparent;
+              border-right: 12px solid transparent;
+              border-bottom: 12px solid black;
+              position: absolute;
+              margin: 0 auto;
+              left: 0;
+              right: 0;
+              top: 5px;
+            }
+          }
+
+        }
+        &:last-child{
+          padding-right: 0;
+        }
+        &:hover{
+          .menu{
+            display: block;
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+section#slide{
+  background: linear-gradient(white, lightgray);
+  height: 300px;
+  .container{
+    height: 100%;
+    #leftArrow{
+      width: 10%;
+      float: left;
+      height: 100%;
+      position: relative;
+      img{
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    #rightArrow{
+      width: 10%;
+      float: left;
+      height: 100%;
+      position: relative;
+      img{
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    .slideContent{
+      width:80%;
+      float: left;
+      .leftContent{
+        width: 50%;
+        float: left;
+        .slider{
+          height: 300px;
+          width: 100%;
+          overflow: hidden;
+          position: relative;
+          ul{
+            list-style: none;
+            position: absolute;
+            width: 2000px;
+            height: 100%;
+            li{
+              float: left;
+              height: 100%;
+              img{
+                width: 380px;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+      .rightContent{
+        width: 50%;
+        float: left;
+        p{
+          text-align: center;
+        }
+        h1{
+          text-transform: uppercase;
+          font-size: 26px;
+          padding-top: 30px;
+          padding-bottom: 10px;
+          text-align: center;
+        }
+        span{
+          color: $mainColor;
+        }
+        #button {
+          width: 40%;
+          margin: 0 auto;
+          input{
+            width: 100%;
+            color: white;
+            background-color: $mainColor;
+            border: 1px solid $mainColor;
+            height: 30px;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+section#information{
+  .container{
+    padding-top: 20px;
+    ul{
+      list-style: none;
+      li{
+        float: left;
+        width: 33.333333%;
+        .content{
+          width: 100%;
+          position: relative;
+          &:hover{
+            .background{
+              display: none;
+            }
+          }
+          .background{
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            z-index: 1;
+            height: 60px;
+            bottom: 30px;
+            .imgText{
+              z-index: 1;
+              position: absolute;
+              bottom: 10px;
+              padding-left: 10px;
+              color: white;
+              #textLine{
+                border: 2px solid $mainColor;
+                position: absolute;
+                width: 180px;
+                z-index: 1;
+              }
+            }
+          }
+        }
+        &::after{
+          content: "";
+          display: block;
+          clear: both;
+        }
+        &:first-child{
+          padding-right: 10px;
+        }
+        &:last-child{
+          padding-left: 10px;
+        }
+        &:nth-child(2){
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+        .right {
+          border: 1px solid gray;
+          height: 200px;
+          width: 100%;
+          p{
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-right: 10px;
+          }
+          .text{
+            font-size: 12px;
+            color: gray;
+          }
+          .line{
+            margin-left: 10px;
+            border: 2px solid $mainColor;
+            width: 150px;
+          }
+        }
+      }
+      &::after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+}
+
+
+
+
+section#price{
+  height: 680px;
+  background-color: lightgray;
+  margin-top: 50px;
+  .container{
+    .row{
+      width: 100%;
+      padding-top: 20px;
+      p{
+        text-transform: uppercase;
+        font-size: 20px;
+      }
+      .priceLine{
+        border: 2px solid $mainColor;
+        width: 180px;
+      }
+    }
+    .plan{
+      width: 33.333%;
+      float: left;
+      margin-top: 55px;
+      position: relative;
+      .planType{
+        border: 1px solid black;
+        height: 500px;
+        background-color: white;
+        h4{
+        text-align: center;
+        padding-top: 40px;
+        text-transform: uppercase;
+        color: $mainColor;
+        }
+        .priceCircle{
+          width: 80px;
+          height: 80px;
+          font-weight: bold;
+          color: grey;
+          border: 1px solid black;
+          position: relative;
+          left: 0;
+          right: 0;
+          margin: auto;
+          top: 40px;
+          border-radius: 50%;
+
+          p{
+            position: absolute;
+            text-align: center;
+            left: 50%;
+
+            top: 50%;
+            transform: translate(-50%, -50%);
+            margin: auto;
+          }
+        }
+        .lista{
+          padding-top: 70px;
+          ul{
+            list-style: none;
+            li{
+              &:nth-child(2n+1){
+                background-color: grey;
+              }
+              &:nth-child(2n){
+                background-color: lightgrey;
+              }
+              text-align: center;
+              padding: 5px 0;
+            }
+          }
+        }
+      }
+      &:hover{
+        .circle{
+          background-color: white;
+          box-shadow: inset 0px 0px 0px 11px $mainColor;
+          border: 1px solid $mainColor;
+        }
+        .planType{
+          background-color: $mainColor;
+          border: 1px solid $mainColor;
+        }
+        h4{
+          color: white;
+        }
+        .priceCircle{
+          background-color: white;
+          color: $mainColor;
+        }
+        .lista{
+          ul{
+            li{
+              &:nth-child(2n+1){
+                background-color: white;
+              }
+              &:nth-child(2n){
+                background-color: lightgrey;
+              }
+            }
+          }
+        }
+        [type="submit"]{
+          background-color: white;
+          color: $mainColor;
+          font-size: 20px;
+        }
+      }
+
+      [type="submit"]{
+        background-color: $mainColor;
+        font-size: 20px;
+        color: white;
+        width: 100px;
+        height: 35px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        position: absolute;
+        border-radius: 5px;
+      }
+      .dolacz{
+        width: 100%;
+        margin: 0 auto;
+        bottom: 50px;
+        position: relative;
+      }
+      .circle{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin: 0 auto;
+        top: 2.5px;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        background-color: white;
+        position: absolute;
+        background-color: gray;
+        box-shadow: inset 0px 0px 0px 11px white;
+      }
+    }
+    #leftPlan{
+      padding-right: 10px;
+    }
+    #middlePlan{
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    #rightPlan{
+      padding-left: 10px;
+    }
+  }
+}
+
+
+
+section#calculator{
+  padding-top: 15px;
+  height: 370px;
+  .container{
+    .rowCalculator{
+      width: 100%;
+      margin-bottom: 15px;
+      .leftChair{
+        float: left;
+        .chairLine{
+          border: 2px solid $mainColor;
+          width: 180px;
+        }
+      }
+      .rightChair{
+        float: right;
+        p{
+          text-align: right;
+        }
+        .sumUpLine{
+          border: 2px solid $mainColor;
+          width: 180px;
+          float: right;
+        }
+      }
+    }
+    .column{
+      float: left;
+    }
+    #leftDropDown{
+      padding-top: 20px;
+      width: 35%;
+      form{
+        select{
+          background-color: white;
+          border: 1px solid $mainColor;
+          color: $mainColor;
+          width: 80%;
+          height: 40px;
+          border-radius: 3px;
+          margin-bottom: 10px;
+          font-size: 22px;
+          option{
+            color: grey;
+            width: 100px;
+            font-size: 16px;
+            &[disabled]{
+              color: $mainColor;
+              display: none;
+            }
+          }
+        }
+      }
+      div.check{
+        @include checkbox(23px);
+      }
+    }
+    #chairImage{
+      width: 30%;
+      img{
+        width: 100%;
+      }
+    }
+    #rightOrder{
+      width: 35%;
+      .upRow{
+        border-bottom: 1px solid grey;
+        .leftColumn{
+          float: left;
+          width: 65%;
+          height: 150px;
+          border-right: 1px solid grey;
+          p{
+            height: 18px;
+            &:first-child{
+              color: $mainColor;
+              font-weight: bold;
+            }
+
+          }
+        }
+        .rightColumn{
+          float: left;
+          width: 35%;
+          height: 150px;
+            p{
+              height: 18px;
+              text-align: right;
+            }
+        }
+      }
+      .downRow{
+        p{
+          &:first-child{
+            float: left;
+          }
+          &:last-child{
+            float: right;
+          }
+        }
+      }
+      .orderButton{
+        width: 100%;
+        padding: 0;
+        div{
+          width: 50%;
+          margin: 0 auto;
+          button{
+            width: 100%;
+            color: white;
+            background-color: $mainColor;
+            border: 1px solid $mainColor;
+            height: 30px;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+section#section4{
+  margin-top: 15px;
+  .bottomLeft{
+    width: 60%;
+    float: left;
+    padding-top: 20px;
+    padding-right: 30px;
+    form{
+      width: 100%;
+      input{
+        width: 100%;
+        height: 30px;
+        font-size: 20px;
+        margin-bottom: 15px;
+        padding-right: 55px;
+      }
+      textarea{
+        resize: none;
+        width: 100%;
+        height: 205px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .bottomRight{
+    width: 40%;
+    float: left;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    input{
+      width: 100%;
+      background-color: $mainColor;
+      color: white;
+      height: 35px;
+      font-size: 20px;
+      border-radius: 3px;
+    }
+    img{
+      width: 90%;
+    }
+    div.check{
+      @include checkbox(16px);
+    }
+  }
+}
+
+footer{
+  background-color: black;
+  .container{
+    .leftFooter, .rightFooter{
+      width: 50%;
+      float: left;
+      border: 1px solid black;
+    }
+    .rightFooter{
+      .social{
+        width: 50%;
+        border: 1px solid black;
+        float: left;
+        img{
+          width: 15%;
+          float: left;
+        }
+      }
+      .sitOnChair{
+        width: 50%;
+        border: 1px solid black;
+        float: left;
+        padding-top: 10px;
+        h4{
+          float: right;
+          color: white;
+          span{
+            color: $mainColor;
+          }
+        }
+      }
+    }
+  }
+}

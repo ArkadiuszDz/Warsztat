@@ -1,0 +1,255 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header::after, div::after, section::after{
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.container{
+  width: 900px;
+  margin: 0 auto;
+}
+
+header span{
+  color: lightgreen;
+}
+
+header h1{
+  text-transform: uppercase;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+header{
+  background-color: black;
+  color: white;
+}
+
+#headerLeft, #headerRight{
+  float: left;
+  width: 50%;
+}
+
+header li{
+  float: left;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+header li:last-child{
+
+  padding-right: 0;
+}
+
+header ul{
+  float: right;
+  list-style: none;
+}
+
+section#slide{
+  background: linear-gradient(white, lightgray);
+  height: 300px;
+}
+
+#leftArrow, #rightArrow{
+  width: 10%;
+}
+
+
+.slideContent{
+  width:80%;
+}
+
+.leftContent, .rightContent{
+  width: 50%;
+  float: left;
+}
+
+.rightContent h1{
+  text-transform: uppercase;
+  font-size: 26px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+
+.rightContent p{
+
+  text-align: center;
+}
+
+#button{
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+#button input{
+  width: 100%;
+  color: white;
+  background-color: lightgreen;
+  border: 1px solid lightgreen;
+  height: 30px;
+  border-radius: 5px;
+}
+
+h1 span{
+  color: lightgreen;
+}
+
+
+img{
+  width: 100%;
+}
+
+
+.left, .middle{
+  width: 33.3333%;
+  float: left;
+  margin-top: 20px;
+}
+
+.content{
+  width: 100%;
+  position: relative;
+}
+
+.background{
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 1;
+  height: 60px;
+  bottom: 30px;
+}
+
+.left{
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.middle{
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.line{
+  border: 2px solid lightgreen;
+  width: 150px;
+}
+
+.right{
+  border: 1px solid gray;
+  height: 200px;
+  width: 100%;
+
+}
+
+.supRight{
+  padding-left: 20px;
+  width: 33.3333%;
+  float: left;
+  margin-top: 20px;
+}
+
+.right p{
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+.right .line{
+  margin-left: 10px;
+
+}
+
+.right .text{
+  font-size: 12px;
+  color: gray;
+}
+
+.imgText{
+  z-index: 1;
+  position: absolute;
+  bottom: 60px;
+  padding-left: 10px;
+  color: white;
+}
+
+#textLine{
+  border: 2px solid lightgreen;
+  position: absolute;
+  width: 180px;
+  z-index: 1;
+}
+
+section#price{
+  height: 600px;
+  background-color: lightgray;
+  margin-top: 50px;
+}
+
+.row{
+  width: 100%;
+  padding-top: 20px;
+}
+
+#leftPlan, #middlePlan, #rightPlan{
+  width: 33.333%;
+  padding: 10px;
+  float: left;
+  margin-top: 20px;
+}
+
+.row p{
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.priceLine{
+  border: 2px solid lightgreen;
+  width: 180px;
+}
+
+.planType{
+  border: 1px solid black;
+  height: 500px;
+  background-color: white;
+}
+
+.circle{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin: 0 auto;
+  margin-top: -525px;
+  background-color: white;
+  position: relative;
+}
+
+.smallCircle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  background-color: lightgray;
+}
+
+.planType h4{
+  text-align: center;
+  padding-top: 40px;
+  text-transform: uppercase;
+  color: lightgreen;
+}
